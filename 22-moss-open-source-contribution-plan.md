@@ -21,24 +21,24 @@ This is a Research Builder contribution because the main work is to read the arc
 
 ## This week's goal
 
-Produce an upstream-ready documentation draft or PR that covers the first-time contributor journey:
+Produce an upstream-ready documentation draft or PR that covers the parts of the first-time contributor journey that are still easiest to miss:
 
 ```text
 install → build/test offline → run simple-flow → understand discover/load/action/simulate → read the safety limits
 ```
 
-The first version will address a bounded part of Issue #16 rather than rewrite all Moss documentation.
+The current Getting Started guide already covers installation, the `simple-flow` wrap example, the four stages, Agent wiring, and adapter onboarding. Therefore, the contribution should supplement it rather than rewrite it.
 
 ## Expected outputs
 
-1. A beginner-friendly quick-start supplement, preferably extending or linking from the existing getting-started documentation after checking for duplication.
-2. A small architecture diagram showing:
+1. A focused FAQ/troubleshooting supplement, preferably linked from the existing Getting Started documentation.
+2. A short “what you should see” section for the existing `wrap` and `swap` commands, including the meaning of `✓ No warnings` and the difference between a Plan and a signed transaction.
+3. A small architecture diagram showing:
 
    ```text
    User → external Agent → Moss MCP tools → protocol adapter → Plan → simulator → wallet
    ```
 
-3. An annotated `simple-flow` example explaining what a newcomer should see after each stage.
 4. A short FAQ covering:
    - Node and pnpm requirements;
    - why simulation can run with zero funds and zero keys;
@@ -64,9 +64,9 @@ The first version will address a bounded part of Issue #16 rather than rewrite a
 
 ### Session 3 — Draft
 
-- Write the quick-start explanation in plain language.
+- Write the focused FAQ/troubleshooting supplement in plain language.
 - Add the Agent/Moss/protocol/wallet diagram.
-- Add the FAQ and links to authoritative documents.
+- Add the expected-output notes and links to authoritative documents.
 
 ### Session 4 — Review
 
@@ -85,6 +85,7 @@ The first version will address a bounded part of Issue #16 rather than rewrite a
 
 - A newcomer can identify prerequisites and run the first safe example.
 - The document explains the four Moss tools without requiring prior protocol knowledge.
+- The document does not duplicate the existing Getting Started guide; it fills a clearly identified FAQ/troubleshooting gap.
 - It states that Moss builds/simulates but never signs/sends.
 - It links to the deeper documentation instead of duplicating every detail.
 - Commands and paths are checked against the repository.
@@ -111,4 +112,3 @@ I am choosing a contribution that matches my current Research Builder identity: 
 - [Agent Skill Guide](https://github.com/nishuzumi/moss/blob/main/docs/agent-skill.md)
 - [Security Model](https://github.com/nishuzumi/moss/blob/main/SECURITY.md)
 - [Contributing Guide](https://github.com/nishuzumi/moss/blob/main/CONTRIBUTING.md)
-
